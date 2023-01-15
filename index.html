@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Sample Chat AI VTuber</title>
+    <link rel="stylesheet" href="aivtuber.css">
+    <script src="./aivtuber.js"></script>
+</head>
+
+<body>
+    <div id="vtuber">
+        <img id="charaImg" src="chara.png" width="auto" height="400" />
+    </div>
+    <div id="aiResponse" class="aiResponseBox">
+        <p class="ai-response" id="aiResponseUtterance"></p>
+    </div>
+    <div class="bottomBox">
+        <p id="userComment"></p>
+        <button id="startLiveButton" onclick="startLive();">LIVE開始</button>
+        <div id="submit_form">
+            <input type="text" id="utterance" />
+            <button id="sendButton" onclick="onClickSend();">送信</button>
+        </div>
+    </div>
+</body>
+
+</html>
