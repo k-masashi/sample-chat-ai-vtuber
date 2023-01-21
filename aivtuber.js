@@ -9,8 +9,6 @@ const VOICE_VOX_API_URL = "http://localhost:50021";
 const YOUTUBE_VIDEO_ID = '<YouTube Video IDを入力してください。>';
 // TODO: YouTube Data APIを利用可能なAPIKEY
 const YOUTUBE_DATA_API_KEY = '<YouTube Data APIのAPIキーを入力してください。>';
-//予備 
-// const YOUTUBE_DATA_API_KEY = 'AIzaSyAR9pyOxM4e7fobT8i4LEpwDyjsCmZJ3_g';
 
 // コメントの取得インターバル (ms)
 const INTERVAL_MILL_SECONDS_RETRIEVING_COMMENTS = 10000;
