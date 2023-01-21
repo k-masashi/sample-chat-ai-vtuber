@@ -25,13 +25,10 @@ var liveCommentQueues = [];
 var responsedLiveComments = [];
 // VTuberが応答を考え中であるかどうか
 var isThinking = false;
-
 // ライブごとに設定する識別子
 var LIVE_OWNER_ID = createUuid();
-
 // NGワードの配列
 var ngwords = []
-
 // YouTube LIVEのコメント取得のページング
 var nextPageToken = "";
 // コメントの取得が開始されているかどうかのフラグ
@@ -91,8 +88,7 @@ async function getMeboResponse(utterance, username, uid, apikey, agentId) {
         body: JSON.stringify(requestBody)
     })
     const content = await response.json();
-    var answer = content.bestResponse.utterance;
-    return answer;
+    return content.bestResponse.utterance;
 }
 
 const playVoice = async (inputText) => {
@@ -174,13 +170,13 @@ const retrieveYouTubeLiveComments = (activeLiveChatId) => {
     ).then(
         (json) => {
             const items = json.items;
-            var index = 0
+            let index = 0
             nextPageToken = json.nextPageToken;
             items?.forEach(
                 (item) => {
                     try {
                         const username = item.authorDetails.displayName;
-                        var message = ""
+                        let message = ""
                         if (item.snippet.textMessageDetails != undefined) {
                             // 一般コメント
                             message = item.snippet.textMessageDetails.messageText;
@@ -192,7 +188,7 @@ const retrieveYouTubeLiveComments = (activeLiveChatId) => {
                         // :::で区切っているが、適宜オブジェクトで格納するように変更する。
                         const additionalComment = username + ":::" + message;
                         if (!liveCommentQueues.includes(additionalComment) && message != "") {
-                            var isNg = false
+                            let isNg = false
                             ngwords.forEach(
                                 (ngWord) => {
                                     if (additionalComment.includes(ngWord)) {
@@ -223,8 +219,8 @@ const retrieveYouTubeLiveComments = (activeLiveChatId) => {
 }
 
 const getNextComment = () => {
-    var nextComment = ""
-    var nextRaw = ""
+    let nextComment = ""
+    let nextRaw = ""
     for (let index in liveCommentQueues) {
         if (!responsedLiveComments.includes(liveCommentQueues[index])) {
             const arr = liveCommentQueues[index].split(":::")
