@@ -34,7 +34,9 @@ const MEBO_AGENT_ID = "<meboのAgent IDを入力してください。>";
 
 ## 3. VOICEVOXをインストール
 声の読み上げはVOICEVOXを利用します。
-下記からVOICEVOXを起動してください。VOICEVOXが起動されることで、ローカル環境にAPIが立ち上がります。
+下記からVOICEVOXをインストールし、起動してください。VOICEVOXが起動されることで、ローカル環境にAPIが立ち上がります。
+[VOICEVOX公式サイト](https://voicevox.hiroshiba.jp/)
+
 
 ```js
 const VOICE_VOX_API_URL = "http://localhost:50021";
