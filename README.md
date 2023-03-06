@@ -72,7 +72,7 @@ const YOUTUBE_DATA_API_KEY = '<YouTube Data APIのAPIキーを入力してくだ
 `index.html`をブラウザで開きましょう。
 ページ下部のテキスト入力欄にコメントを入力し「送信」ボタンを押して、無事応答が返ってくれば成功です。
 
-# LINE開始
+# LIVE開始
 動作確認が完了したら、「LIVE開始」を押しましょう。
 YouTube LIVEのコメントに対して応答を返すようになります。
 [OBS](https://obsproject.com/ja/download)などの画面配信が可能なツールを利用して、AI VTuberを表示しているブラウザのキャプチャをYouTubeに配信しましょう。
